@@ -14,12 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('panel.pages.invoice');
-})->middleware('auth');
+    return view('welcome');
+});
 
 Auth::routes();
 
-Route::post('/pay', [App\Http\Controllers\Payment\PaymentController::class, 'createPayment'])->name('pay')->middleware('auth');
-Route::any('/verify', [App\Http\Controllers\Payment\PaymentController::class, 'verify'])->name('verify.payment');
-Route::any('/result', [App\Http\Controllers\Payment\PaymentController::class, 'result'])->name('result.payment');
+Route::get('/logs/count', App\Http\Controllers\Log\CountLogController::class)->name('calculate.log.count');
+
 
