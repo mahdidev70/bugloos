@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/logs/count', App\Http\Controllers\Log\CountLogController::class)->name('calculate.log.count');
 

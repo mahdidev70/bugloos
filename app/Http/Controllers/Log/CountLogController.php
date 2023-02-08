@@ -16,6 +16,12 @@ class CountLogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    /**
+     * @QAparam service_name string
+     * @QAparam status integer
+     * @QAparam start date
+     * @QAparam end date
+     */
     public function __invoke(Request $request)
     {
         $filter = [];
